@@ -149,9 +149,13 @@ for ($j=0; $j <6 ; $j++) {
   for ($i=0; $i <6 ; $i++) {
     $k = (($j*6) +$i);
   fwrite($myfile,$list[$k]);
-  fwrite($myfile," ");
+  if ($i<=4){
+      fwrite($myfile," ");
+    }
   }
-  fwrite($myfile,"\r\n");
+  if ($j<=4){
+      fwrite($myfile,"\r\n");
+    }
 }
     fclose($myfile);
   }

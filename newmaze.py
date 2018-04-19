@@ -68,7 +68,7 @@ def directions(path):
     return direction    
 
 
-infile = open("mazepoints.txt", "r")
+infile = open("values.txt", "r")
 
 val = infile.read().split("\n")
 
@@ -91,8 +91,11 @@ print(finaldir)
 #This is the part that calls the movement functions.
 for a in finaldir:
     if a=='R':
-        right()
+        #right()
+        print("right")
     if a=='F':
-        forward()
+        #forward()
+        print("front")
     if a=='L':
-        left()
+        #left()
+        print("left")
